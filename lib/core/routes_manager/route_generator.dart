@@ -1,14 +1,12 @@
 import 'package:e_commerce_app/core/routes_manager/routes.dart';
 import 'package:e_commerce_app/features/auth/presentaion/screens/login/login_screen.dart';
 import 'package:e_commerce_app/features/auth/presentaion/screens/register/register_screen.dart';
-import 'package:e_commerce_app/features/cart_screen.dart';
-import 'package:e_commerce_app/features/main_layout.dart';
-import 'package:e_commerce_app/features/product_details.dart';
-import 'package:e_commerce_app/features/products_screen.dart';
+import 'package:e_commerce_app/features/cart/cart_screen.dart';
+import 'package:e_commerce_app/features/main_Layout/main_layout.dart';
+import 'package:e_commerce_app/features/product_details/product_details.dart';
+import 'package:e_commerce_app/features/product_screen/products_screen.dart';
 import 'package:e_commerce_app/features/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
-
-
 
 class RouteGenerator {
   static Route<dynamic> getRoute(RouteSettings settings) {
@@ -16,7 +14,7 @@ class RouteGenerator {
       case Routes.cartRoute:
         return MaterialPageRoute(builder: (_) => const CartScreen());
       case Routes.mainRoute:
-        return MaterialPageRoute(builder: (_) => const MainLayout());
+        return MaterialPageRoute(builder: (_) => MainLayout());
 
       case Routes.productsScreenRoute:
         return MaterialPageRoute(builder: (_) => const ProductsScreen());
@@ -25,7 +23,7 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const ProductDetails());
 
       case Routes.signInRoute:
-        return MaterialPageRoute(builder: (_) => const LoginScreen());
+        return MaterialPageRoute(builder: (_) => LoginScreen());
 
       case Routes.splashScreenRoute:
         return MaterialPageRoute(builder: (_) => const SplashScreen());
