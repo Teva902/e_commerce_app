@@ -1,4 +1,5 @@
 import 'package:e_commerce_app/core/widget/dialog_utils.dart';
+import 'package:e_commerce_app/core/widget/shared_prefernce_utils.dart';
 import 'package:e_commerce_app/domain/di/di.dart';
 import 'package:e_commerce_app/features/auth/presentaion/screens/login/cubit/login_states.dart';
 import 'package:e_commerce_app/features/auth/presentaion/screens/login/cubit/login_view_model.dart';
@@ -42,6 +43,8 @@ class LoginScreen extends StatelessWidget {
               title: 'Success',
               posActionName: 'Ok',
               posAction: () {
+                SharedPreferenceUtils.saveData(
+                    key: 'token', value: state.responseEntity.token);
                 Navigator.of(context).pushReplacementNamed(Routes.mainRoute);
               });
         }

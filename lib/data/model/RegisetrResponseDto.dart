@@ -1,11 +1,13 @@
+
+
 import 'package:e_commerce_app/domain/entity/RegisterResponseEntity.dart';
 
 class RegisterResponseDto extends RegisterResponseEntity {
   RegisterResponseDto({
-    super.statusMsg,
-    super.user,
-    super.token,
     super.message,
+    super.user,
+    super.statusMsg,
+    super.token,
   });
 
   RegisterResponseDto.fromJson(dynamic json) {
@@ -14,8 +16,6 @@ class RegisterResponseDto extends RegisterResponseEntity {
     user = json['user'] != null ? UserDto.fromJson(json['user']) : null;
     token = json['token'];
   }
-
-  String? message;
 }
 
 class UserDto extends UserEntity {
