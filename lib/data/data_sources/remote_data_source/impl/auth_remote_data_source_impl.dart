@@ -3,7 +3,7 @@ import 'package:e_commerce_app/data/api_manager.dart';
 import 'package:e_commerce_app/data/data_sources/remote_data_source/auth_remote_data_source.dart';
 import 'package:e_commerce_app/data/end_point.dart';
 import 'package:e_commerce_app/data/model/LoginResponseDto.dart';
-import 'package:e_commerce_app/data/model/RegisterResponseDto.dart';
+import 'package:e_commerce_app/data/model/RegisetrResponseDto.dart';
 import 'package:e_commerce_app/domain/failuer.dart';
 import 'package:injectable/injectable.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
